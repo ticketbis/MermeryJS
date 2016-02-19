@@ -1,0 +1,31 @@
+{
+  "name": "mermery.js",
+  "homepage": "https://github.com/ticketbis/Mermery.js",
+  "authors": [
+    "Eduardo Perrino <eduardo.perrino@ticketbis.com>"
+  ],
+  "description": "Improve form state recovery with this minimal jQuery plugin that stores field values in HTML5 sessionStorage in any moment and/or situation.",
+  "main": "jquery.mermery.js",
+  "keywords": [
+    "localStorage",
+    "sessionStorage",
+    "form",
+    "caching",
+    "user",
+    "experience"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7.0"
+  },
+  "devDependencies": {
+  }
+}

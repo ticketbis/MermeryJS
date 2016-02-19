@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>mermery.js Documentation</title>
+
+    <!--Page Specific Metas-->
+    <meta name="description" content="Improve form usability with this tiny jQuery plugin"/>
+    <meta name="author" content="mermery.js"/>
+
+    <!--Mobile Specific Metas-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="example.css"/>
+</head>
+<body>
+
+<div id="container">
+    <div class="header">
+        <div class="wrap">
+            <h1>mermery.js</h1>
+            <h3>Improve form recovery with this minimal jQuery plugin that stores
+              field values in HTML5 sessionStorage in any moment and/or situation.</h3>
+        </div>
+    </div>
+
+    <div class="block grey-lighter">
+        <div class="wrap">
+            <h2>A Quick Example</h2>
+            <p>
+                The example below will store form values when page loaded so that
+                you could enter some data and recover the initial state anytime
+                pushing the "Unstash Form" button.
+                The plugin clears session data when the user push the "Clear data" button
+                or submits the form, otherwise it will last until the browser window is closed.
+            </p>
+            <form action="/" method="post" class="mermery">
+                <div class="grid-row">
+                    <div class="col4">
+                        <p>
+                            <strong>Example Text Field</strong><br/>
+                            <input type="text" name="test-text" value="Init value">
+                        </p>
+                    </div>
+                    <div class="col4">
+                        <p><strong>Example Number Field</strong><br/>
+                            <input type="number" name="test-number" value=""></p>
+                    </div>
+                    <div class="col4">
+                        <p>
+                            <strong>Example Email Field</strong><br/>
+                            <input type="email" name="test-email" value="">
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="col4">
+                        <p>
+                            <strong>Example Radio Buttons</strong><br/>
+                            <input type="radio" name="test-radio" value="yes"> Yes <input type="radio" name="test-radio" value="no"> No
+                        </p>
+                    </div>
+                    <div class="col4">
+                        <p>
+                            <strong>Example Range Field</strong><br/>
+                            <input type="range" name="test-range" value="">
+                        </p>
+                    </div>
+                    <div class="col4">
+                        <p>
+                            <strong>Example Color Field</strong><br/>
+                            <input type="color" name="test-color" value="#000000">
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="col4">
+                        <p>
+                            <strong>Example Checkboxes</strong><br/>
+                            <input type="checkbox" name="test-checkbox" value="yes"> Option 1 <input type="checkbox" name="test-checkbox" value="no"> Option 2
+                        </p>
+                    </div>
+                    <div class="col4">
+                        <p>
+                            <strong>Example Select List</strong><br/>
+                            <select name="test-select">
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                                <option value="4">Option 4</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="col4">
+                        <p>
+                            <strong>Example Select Multiple List</strong><br/>
+                            <select name="test-select-multiple" multiple>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                                <option value="4">Option 4</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="col6">
+                        <p>
+                            <strong>Example Date Field</strong><br/>
+                            <input type="date" name="test-date" value="">
+                        </p>
+                    </div>
+                    <div class="col6">
+                        <p>
+                            <strong>Example Datetime (Local) Field</strong><br/>
+                            <input type="datetime-local" name="test-datetime-local" value="">
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="col4">
+                        <p>
+                            <strong>Example Month Field</strong><br/>
+                            <input type="month" name="test-month" value="">
+                        </p>
+                    </div>
+                    <div class="col4">
+                        <p>
+                            <strong>Example Week Field</strong><br/>
+                            <input type="week" name="test-week" value="">
+                        </p>
+                    </div>
+                    <div class="col4">
+                        <p>
+                            <strong>Example Time Field</strong><br/>
+                            <input type="time" name="test-time" value="">
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="col6">
+                        <p>
+                            <strong>Example Search Field</strong><br/>
+                            <input type="search" name="test-search" value="">
+                        </p>
+                    </div>
+                    <div class="col6">
+                        <p>
+                            <strong>Example Tel Field</strong><br/>
+                            <input type="tel" name="test-tel" value="">
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="col12">
+                        <p>
+                            <strong>Example URL Field</strong><br/>
+                            <input type="url" name="test-url" value="">
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="col12">
+                        <p>
+                            <strong>Example Textarea</strong><br/>
+                            <textarea name="test-textarea"></textarea>
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="col4">
+                        <button type="button" id="clear">Clear data</button>
+                    </div>
+                    <div class="col4">
+                        <button type="button" id="unstash">Unstash Form</button>
+                    </div>
+                    <div class="col4">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <a name="download"></a>
+
+    <div class="block grey">
+        <div class="wrap">
+            <h2>Download mermery.js</h2>
+            <p>Visit the project on Github for updates or just download the source and dig in!</p>
+            <p class="buttons"><a href="#" target="_blank" class="btn">mermery.js on Github</a> <a href="#" target="_blank" class="btn gold">Download
+                    Latest</a></p>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <a name="author"></a>
+
+    <div class="block gold footer">
+        <div class="wrap">
+            <h3>Boosted with passion for <strong>free</strong> by, <a href="http://ticketbis.github.io/" target="_blank">Ticketbis Engineering</a>.</h3>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</div>
+
+<!--Scripts-->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="jquery.mermery.min.js"></script>
+
+<script>
+    $(function () {
+
+
+      // Clear data session
+      // this is using a namespace to distinguish between a standard click event.
+      // of course 'click' can be used on its own.
+      $('#clear').on('click.mermeryjs.example', function () {
+          // cache the jQuery button object.
+          var $this = $(this);
+          // cache the form.
+          var $form = $('.mermery');
+          $form.mermery('clear');
+      });
+
+        // Recover the initial status of te
+        // this is using a namespace to distinguish between a standard click event.
+        // of course 'click' can be used on its own.
+        $('#unstash').on('click.mermeryjs.example', function () {
+            // cache the jQuery button object.
+            var $this = $(this);
+            // cache the form.
+            var $form = $('.mermery');
+            $form.mermery('unstash');
+        });
+
+        // when the form is submitted.
+        $('form').on('submit.mermery.example', function (event) {
+            // prevent default submission of the form.
+            event.preventDefault();
+            // cache the form jQuery object.
+            var $this = $(this);
+            // display an alert. This would normally be a submission e.g. ajax.
+            window.alert('Form submitted. The form will now be reset and the session data cleared.');
+            // reset the form, by triggering a reset event.
+            $this.trigger('reset');
+        });
+
+    });
+</script>
+
+</body>
+</html>
