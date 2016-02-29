@@ -1,5 +1,8 @@
 ## Mermery.js
 
+
+[![BuildStatus](https://api.travis-ci.org/ticketbis/MermeryJS.svg?branch=gh-pages)](https://travis-ci.org/ticketbis/MermeryJS)
+
 Store form state in HTML5 sessionStorage or localStorage .
 
 To get started, simply include the plugin after your jQuery library is loaded, and add a class of `mermery` to your form. The plugin does its own bindings for that class, otherwise you can set it up to target your forms using the code below:
@@ -66,4 +69,3 @@ To contribute, you'll need [NodeJS](http://nodejs.org/) and [Grunt](http://grunt
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 *****
-
