@@ -101,8 +101,6 @@ module.exports = function(grunt) {
 
     // Register the default task to watch for any changes to the main files
     grunt.registerTask('default', ['watch']);
-
-
-
+    grunt.registerTask('test', ['karma'])
 
 };

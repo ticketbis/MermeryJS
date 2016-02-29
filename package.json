@@ -6,6 +6,9 @@
     "type": "git",
     "url": "git@github.com:ticketbis/MermeryJS.git"
   },
+  "scripts": {
+      "test": "grunt test"
+  },
   "devDependencies": {
     "del": "^2.2.0",
     "grunt": "^0.4.5",
