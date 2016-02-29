@@ -1,22 +1,28 @@
 {
-  "name": "squirreljs",
-  "version": "0.1.8",
+  "name": "mermeryjs",
+  "version": "0.0.1",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jpederson/Squirrel.js.git"
+    "url": "git@github.com:ticketbis/MermeryJS.git"
   },
   "devDependencies": {
     "del": "^2.2.0",
-    "grunt": "latest",
+    "grunt": "^0.4.5",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-sass": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-jsbeautifier": "^0.2.10",
+    "grunt-karma": "^0.12.1",
     "gulp-sass": "^2.1.1",
     "jshint": "^2.8.0",
-    "matchdep": "*"
+    "karma": "^0.13.21",
+    "karma-jasmine": "^0.3.7",
+    "karma-jasmine-jquery": "^0.1.1",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "matchdep": "*",
+    "phantomjs-prebuilt": "^2.1.4"
   }
 }
