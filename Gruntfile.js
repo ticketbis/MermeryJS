@@ -91,11 +91,18 @@ module.exports = function(grunt) {
             },
         },
 
+        karma: {
+          unit: {
+            configFile: 'karma.conf.js'
+          }
+        }
+
     });
 
     // Register the default task to watch for any changes to the main files
     grunt.registerTask('default', ['watch']);
 
-    // 'grunt jshint' to check the syntax
-    // 'grunt uglify' to uglify the main file
+
+
+
 };
